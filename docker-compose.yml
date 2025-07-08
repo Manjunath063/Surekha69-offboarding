@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: admin123
       POSTGRES_DB: offboarding_db
     ports:
-      - "5425:5432"
+      - "5601:5432"
     volumes:
       - pgdata69:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -18,7 +18,7 @@ services:
     build: ./Backend
     container_name: surekha69-backend
     ports:
-      - "3030:3030"
+      - "3601:3601"
     depends_on:
       - postgres
     environment:
@@ -33,7 +33,7 @@ services:
     build: ./employee-offboarding
     container_name: surekha69-employee
     ports:
-      - "8053:80"
+      - "8602:80"
     depends_on:
       - backend
 
@@ -41,7 +41,7 @@ services:
     build: ./hr-offboarding
     container_name: surekha69-hr
     ports:
-      - "8054:80"
+      - "8063:80"
     depends_on:
       - backend
 
