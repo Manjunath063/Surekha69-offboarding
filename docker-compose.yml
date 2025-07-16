@@ -22,7 +22,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - PORT=3030
+      - PORT=3601
       - DB_USER=postgres
       - DB_PASSWORD=admin123
       - DB_NAME=offboarding_db
