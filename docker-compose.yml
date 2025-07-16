@@ -41,7 +41,7 @@ services:
     build: ./hr-offboarding
     container_name: surekha69-hr
     ports:
-      - "8063:80"
+      - "8603:80"
     depends_on:
       - backend
 
